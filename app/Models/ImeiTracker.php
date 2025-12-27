@@ -1,0 +1,78 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class ImeiTracker extends Model
+{
+    protected $fillable = [
+        'source_name',
+        'product_date',
+        'pi_number',
+        'packing_list_number',
+        'ean_upc_code',
+        'item_sales',
+        'price_dp',
+        'price_rp',
+        'price_mrp',
+        'brand',
+        'model_name',
+        'marketing_name',
+        'color',
+        'device_type',
+        'app_ref_hash',
+        'country_of_origin',
+        'manufacturer_as_per_imei',
+        'tac',
+        'no_of_sim',
+        'battery_capacity',
+        'battery_capacity_tested',
+        'charger_adapter_type',
+        'charger_output',
+        'processor',
+        'ram',
+        'rom',
+        'nfc',
+        'bluetooth',
+        'wlan',
+        'data_speed_dl',
+        'sar_value_w_kg',
+        'rear_camera',
+        'front_camera',
+        'camera_resolution_in_software',
+        'radio_interface',
+        'supported_spectrum_bands_2g',
+        'supported_spectrum_bands_3g',
+        'supported_spectrum_bands_4g',
+        'motherboard',
+        'motherboard_chipset_model',
+        'operating_system',
+        'shipment_mode',
+        'product_type',
+        'unit_price_import',
+        'unit_price_mrp_bdt',
+        'marketing_period',
+        'imei_tac_1',
+        'imei_tac_2',
+        'imei_tac_3',
+        'imei_tac_4',
+        'imei_1',
+        'imei_2',
+        'imei_text',
+        'serial_no',
+        'send_to_btrc_at',
+        'btrc_update_status',
+    ];
+
+    protected $casts = [
+        'product_date' => 'date',
+        'send_to_btrc_at' => 'datetime',
+        'nfc' => 'boolean',
+        'price_dp' => 'decimal:2',
+        'price_rp' => 'decimal:2',
+        'price_mrp' => 'decimal:2',
+        'unit_price_import' => 'decimal:2',
+        'unit_price_mrp_bdt' => 'decimal:2',
+    ];
+}
